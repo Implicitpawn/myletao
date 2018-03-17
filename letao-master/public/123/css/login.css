@@ -1,0 +1,31 @@
+.mui-input-group::after {
+  height: 0;
+}
+.mui-input-group::before {
+  height: 0;
+}
+.mui-input-group div input::-webkit-input-placeholder {
+  font-size: 14px;
+}
+.mui-input-group .mui-button-row {
+  margin-top: 15px;
+}
+.mui-input-group .mui-button-row > input:first-child {
+  background-color: #0968b6;
+  color: #fff;
+  border-radius: 5px;
+}
+.mui-input-group .mui-button-row > input:last-child {
+  background-color: orangered;
+  color: #fff;
+  border-radius: 5px;
+}
+.register {
+  width: 100%;
+  padding: 0 15px;
+}
+.register > a {
+  float: right;
+  font-size: 14px;
+  color: red;
+}

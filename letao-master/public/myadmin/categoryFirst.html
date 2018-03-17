@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>后台系统-首页</title>
+    <link rel="stylesheet" href="./assets/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/bootstrapValidator/css/bootstrapValidator.css">
+    <link rel="stylesheet" href="./assets/nprogress/css/nprogress.css">
+    <link rel="stylesheet" href="./css/common.css">
+</head>
+<body>
+    <aside class="asider_left bg_color_black">
+        <div class="asider_login ">
+            ITCAST
+        </div>
+        <div class="asider_user">
+            <img src="./images/default.png" alt="">
+            北凉王
+        </div>
+        <div class="asider_muse">
+            <ul>
+                <li>
+                    <a href="./userManage.html">
+                        <span class="glyphicon glyphicon-user"></span>
+                        用户管理
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;" class="category_now">
+                        <span class="glyphicon glyphicon-list"></span>
+                        分类管理
+                    </a>
+                    <div class="asider_category">
+                        <a href="javascript:;" class="categoryFirst">一级分类</a>
+                        <a href="./categoryScond.html" class="categorySccond">二级分类</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="./productManage.html">
+                        <span class="glyphicon glyphicon-tags"></span>
+                        商品管理
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </aside>
+    <section class="asider_right">
+        <nav>
+            <a href="javascript:;" class="menu_toggle"><span class="glyphicon glyphicon-align-justify"></span></a>
+            <a href="javascript:;" class="login_out"><span class="glyphicon glyphicon-log-out"></span></a>
+        </nav>
+        <div class="container-fluid">
+            <ol class="breadcrumb">
+                <li><a href="./index.html">后台管理</a></li>
+                
+                <li class="active">商品管理</li>
+                <li class="active">一级分类</li>
+            </ol>
+            <button class="add_btn btn btn-default">添加一级分类</button>
+            <div class="ad_content">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th width="10%">序号</th>
+                            <th width="40%">分类</th>
+                            <th width="25%">状态</th>
+                            <th width="25%">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>
+                                <a href="javascript:;" class="btn btn-sm btn-danger">5</a>
+                            </td>
+                        </tr> -->
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <ul class="pagination pagination-sm" id="page">
+                    <li class="active">
+                        <a title="Current page is 1">1</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        
+        
+    </section>
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" id="myModal_first">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">添加一级分类</h4>
+            </div>
+            <div class="modal-body">
+                <form action="" id="first_form">
+                    <div class="form-group">
+                        <input type="text" name="categoryName" class="form-control" placeholder="请输入分类名称">
+                    </div>
+                </form>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="submit" class="btn btn-primary" form='first_form'>确定</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/jquery-3.3.1/jquery-3.3.1/jquery-3.3.1.js"></script>
+    <script src="./assets/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="./assets/bootstrapValidator/js/bootstrapValidator.js"></script>
+    <script src="./assets/nprogress/js/nprogress.js"></script>
+    <script src="./assets/bootstrap-paginator/bootstrap-paginator.js"></script>
+    <script src="./js/admin.js"></script>
+    <script src="./js/categoryFirst.js"></script>
+    <script src="./assets/artTemplate/template.js"></script>
+    <script type="text/html" id="first_tem">
+        {{each rows}}
+        <tr>
+            <td>{{(page-1)*size+$index+1}}</td>
+            <td>{{$value.categoryName}}</td>
+            <td>{{$value.isDelete==1 ?'已启用' :'已禁用'}}</td>
+            <td>
+                <a href="javascript:;" class="btn btn-sm btn-danger">{{$value.isDelete==1 ?'禁用' :'启用'}}</a>
+            </td>
+        </tr>
+        {{/each}}
+    </script>
+</body>
+</html>

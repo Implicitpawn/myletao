@@ -1,0 +1,3 @@
+.mui-input-group::after {
+  height: 0;
+}

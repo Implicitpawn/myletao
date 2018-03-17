@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品列表</title>
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.css"/>
+    <link rel="stylesheet" href="assets/fa/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/searchList.css"/>
+</head>
+<body>
+    <div class="it_container">
+        <header class="it_topbar">
+            <a href="javascript:history.back();" class="btn_left"><span class="mui-icon mui-icon-arrowleft"></span></a>        
+            <h3>商品列表</h3>
+        </header>
+        <div class="it_content">
+            <div class="it_warpper">
+                <div class="mui-scroll-warpper">
+                   <div class="it_search">
+                    <form class="mui-search">
+                        <input type="search" class="mui-input-clear" placeholder="请输入商品名称">
+                        <a href="javascript:;" class="sousou">搜索</a>
+                    </form>
+                    </div>
+                    <div class="it_order">
+                        <a href="javascript:;" class="order_active">
+                            上架时间
+                            <span class="fa fa-angle-down"></span>
+                        </a>
+                        <a href="javascript:;" data-type="price">
+                            价格
+                            <span class="fa fa-angle-down"></span>
+                        </a>
+                        <a href="javascript:;" data-type="num">
+                            销量
+                            <span class="fa fa-angle-down"></span>
+                        </a>
+                        <a href="javascript:;">
+                            折扣
+                            <span class="fa fa-angle-down"></span>
+                        </a>
+                    </div>
+                    <div class="it_product">
+                        <div class="search_loading">
+                            <img src="./images/5-160914192R6-50.gif" alt="">
+                            <img src="./images/5-121204194026.gif" alt="">
+                        </div>
+                        
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <footer class="it_bottombar">
+            <ul>
+                <li>
+                    <a href="./index.html">
+                        <span class="fa fa-home"></span>
+                        <p class="mui-tab-label">首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./category.html">
+                        <span class="fa fa-bars"></span>
+                        <p class="mui-tab-label">分类</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./cart.html">
+                        <span class="fa fa-shopping-cart"></span>
+                        <p class="mui-tab-label">购物车</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./user/index.html">
+                        <span class="fa fa-user"></span>
+                        <p class="mui-tab-label">会员中心</p>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <script src="./assets/zepto/zepto.min.js"></script>
+    <script src="assets/mui/js/mui.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/searchList.js"></script>
+    <script src="./assets/artTemplate/template.js"></script>
+    <script type="text/template" id="search_list">
+        {{each data}}
+        <a href="javascript:;">
+            {{if $value.pic.length>0}}
+            <img src="{{$value.pic[0].picAddr}}" alt="">
+            {{else}}
+            <img src="./images/product.jpg" alt="">
+            {{/if}}
+            <span class="mui-ellipsis-2 mui-text-left">{{$value.proName}}</span>
+            <p>
+                <span>￥{{$value.price}}</span> <span>￥{{$value.oldPrice}}</span>
+            </p>
+            <button data-id="{{$value.id}}">立即购买</button>
+        </a>
+        {{/each}}
+    </script>
+</body>
+</html>

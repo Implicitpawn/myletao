@@ -1,0 +1,119 @@
+.it_topbar > .btn_right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  color: #fff;
+}
+.product_banner > ul > li {
+  width: 100%;
+  padding: 15px 5px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.product_banner > ul > li:nth-child(1) {
+  font-size: 18px;
+}
+.product_banner > ul > li:nth-child(2) > span:nth-child(1) {
+  font-size: 14px;
+}
+.product_banner > ul > li:nth-child(2) > span:nth-child(2) {
+  font-size: 24px;
+  color: red;
+  font-weight: bold;
+}
+.product_banner > ul > li:nth-child(2) > span:nth-child(3) {
+  font-size: 12px;
+  text-decoration: line-through;
+  color: #afafaf;
+  margin-left: 20px;
+}
+.product_banner > ul > li:nth-child(3) {
+  font-size: 14px;
+}
+.product_banner > ul > li:nth-child(3) > span {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 28px;
+  background-color: #f8f1f1;
+}
+.product_banner > ul > li:nth-child(3) > span.product_active {
+  background-color: orangered;
+}
+.product_banner > ul > li:nth-child(4) {
+  font-size: 14px;
+}
+.product_banner > ul > li:nth-child(4) > span {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ccc;
+  text-align: center;
+  line-height: 28px;
+  vertical-align: middle;
+  background-color: #f8f4f4;
+}
+.product_banner > ul > li:nth-child(4) > span.product_right {
+  margin-right: 40px;
+}
+.product_banner > ul > li:nth-child(4) > span.touch_active {
+  background-color: orangered;
+}
+.product_banner > ul > li:nth-child(4) > input {
+  width: 28px;
+  border: 1px solid #ccc;
+  height: 28px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 28px;
+}
+.it_bottombar {
+  height: 50px;
+  background-color: #e6e6e6;
+}
+.it_bottombar > ul > li {
+  height: 50px;
+}
+.it_bottombar > ul > li:nth-child(1) {
+  line-height: 50px;
+  width: 20%;
+}
+.it_bottombar > ul > li:nth-child(1) > a {
+  color: #333;
+  font-size: 20px;
+  text-align: center;
+}
+.it_bottombar > ul > .btn_buy,
+.it_bottombar > ul .btn_car {
+  width: 40%;
+  float: right;
+  padding: 5px;
+}
+.it_bottombar > ul > .btn_buy > a,
+.it_bottombar > ul .btn_car > a {
+  line-height: 40px;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.it_bottombar > ul > .btn_car > a {
+  background-color: #991020;
+  border-radius: 5px;
+}
+.it_bottombar > ul > .btn_buy > a {
+  background-color: orange;
+  border-radius: 5px;
+}

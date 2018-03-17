@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>搜索中心</title>
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.css"/>
+    <link rel="stylesheet" href="assets/fa/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/search.css"/>
+</head>
+<body>
+    <div class="it_container">
+        <header class="it_topbar">
+            <a href="javascript:history.back();" class="btn_left"><span class="mui-icon mui-icon-arrowleft"></span></a>        
+            <h3>搜索中心</h3>
+        </header>
+        <div class="it_content">
+            <div class="it_warpper">
+                <div class="mui-scroll-warpper">
+                    <div class="it_search">
+                        <form class="mui-search">
+                            <input type="search" class="mui-input-clear" placeholder="请输入商品名称">
+                            <a href="javascript:;">搜索</a>
+                        </form>
+                    </div>
+                    <div class="it_history">
+                        <div class="mui-clearfix">
+                            <span class="mui-pull-left search_left"></span>
+                            <span class="mui-pull-right fa fa-trash search_right">
+                                清空历史
+                            </span>
+                        </div>
+                        <ul class="search_history"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="it_bottombar">
+            <ul>
+                <li>
+                    <a href="./index.html">
+                        <span class="fa fa-home"></span>
+                        <p class="mui-tab-label">首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./category.html">
+                        <span class="fa fa-bars"></span>
+                        <p class="mui-tab-label">分类</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./cart.html">
+                        <span class="fa fa-shopping-cart"></span>
+                        <p class="mui-tab-label">购物车</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./user/index.html">
+                        <span class="fa fa-user"></span>
+                        <p class="mui-tab-label">会员中心</p>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <script src="./assets/zepto/zepto.min.js"></script>
+    <script src="assets/mui/js/mui.js"></script>
+    <script src="./assets/artTemplate/template.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="js/search.js"></script>
+    <script type="text/html" id="search_read">
+        <!-- <div class="mui-clearfix">
+            <span class="mui-pull-left search_left"></span><br>
+            
+            <span class="mui-pull-right fa fa-trash search_right">
+                清空历史
+            </span>
+        </div> -->
+            {{each search}}
+            <li>
+                <a href="javascript:;">{{$value}}</a>
+                <span class="mui-icon mui-icon-closeempty"></span>
+            </li>
+            {{/each}}
+    </script>
+</body>
+</html>

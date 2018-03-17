@@ -1,0 +1,123 @@
+.it_content {
+  padding-bottom: 85px;
+}
+.it_content > .it_warpper {
+  position: relative;
+}
+.it_content > .it_warpper > .mui-scrolls {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.it_content > .it_warpper > .mui-scrolls > ul {
+  position: relative;
+  border-top: 1px solid #ccc;
+}
+.it_content > .it_warpper > .mui-scrolls > ul > li {
+  padding: 11px 15px;
+  position: relative;
+}
+.it_content > .it_warpper > .mui-scrolls > ul > li > a {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.it_content > .it_warpper > .mui-scrolls > ul > li > a > img {
+  display: block;
+  width: 60px;
+  float: left;
+}
+.it_content > .it_warpper > .mui-scrolls > ul > li > a > div {
+  margin-left: 70px;
+}
+.it_content > .it_warpper > .mui-scrolls > ul > li > a > div > p:nth-child(1) {
+  color: #666;
+}
+.it_content > .it_warpper > .mui-scrolls > ul > li > a > div > p:nth-child(2) > span:nth-child(1) {
+  color: red;
+  font-size: 13px;
+}
+.it_content > .it_warpper > .mui-scrolls > ul > li > a > div > p:nth-child(2) > span:nth-child(2) {
+  font-size: 12px;
+  color: #ccc;
+  margin-left: 10px;
+  text-decoration: line-through;
+}
+.it_content > .it_warpper > .mui-scrolls > ul > li > a > div > p:nth-child(2) > span:nth-child(3) {
+  color: #8f8f94;
+  font-size: 13px;
+  float: right;
+  margin-right: 5px;
+}
+.it_content > .it_warpper > .mui-scrolls > ul > li > a > div > p:nth-child(3) {
+  font-size: 13px;
+}
+.it_content > .it_warpper > .mui-scrolls > ul > li > a > input {
+  position: absolute;
+  left: 20px;
+  bottom: 5px;
+}
+.it_content > .it_warpper > .mui-scrolls > ul > li > a > span {
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  display: block;
+  font-size: 16px;
+  transform: translateY(-50%);
+  color: #8f8f94;
+}
+.order {
+  position: absolute;
+  left: 0;
+  bottom: 55px;
+  line-height: 30px;
+  font-size: 14px;
+  padding-left: 20px;
+  color: #ff3300;
+  width: 100%;
+  font-weight: bold;
+  border-top: 1px solid #ccc;
+}
+.order > a {
+  float: right;
+  width: 100px;
+  background-color: #ff3300;
+  color: #fff;
+  text-align: center;
+}
+.update_size {
+  text-align: left;
+}
+.update_size > span {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  background-color: #e9e9f0;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-right: 3px;
+}
+.update_size > span.size_active {
+  background-color: #ff3300;
+}
+.update_num {
+  text-align: left;
+}
+.update_num > span {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  background-color: #e9e9f0;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.update_num > span.num_active {
+  background-color: #ff3300;
+}

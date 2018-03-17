@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情</title>
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.css"/>
+    <link rel="stylesheet" href="assets/fa/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/product.css"/>
+</head>
+<body>
+        <div class="it_container">
+            <header class="it_topbar">
+                <a href="javascript:history.back();" class="btn_left"><span class="mui-icon mui-icon-arrowleft"></span></a>        
+                <h3>商品详情</h3>
+                <a href="./index.html" class="btn_right"><span class="fa fa-home"></span></a>        
+            </header>
+            <div class="it_content">
+                <div class="it_warpper">
+                    <div class="mui-scroll-warpper">
+                        <div class="it_product">
+                            <div class="search_loading">
+                                <img src="./images/5-160914192R6-50.gif" alt="">
+                                <img src="./images/5-121204194026.gif" alt="">
+                            </div>                            
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <footer class="it_bottombar">
+                <ul>
+                    <li>
+                        <a href="./cart.html">
+                            <span class="fa fa-shopping-cart"></span>
+                        </a>
+                    </li>
+                    <li class="btn_buy">
+                        <a href="./category.html">
+                            立即购买
+                        </a>
+                    </li>
+                    <li class="btn_car">
+                        <a href="javascript:;">
+                            加入购物车
+                        </a>
+                    </li>
+                </ul>
+            </footer>
+        </div>
+    <script src="./assets/zepto/zepto.min.js"></script>
+    <script src="assets/mui/js/mui.js"></script>
+    <script src="./js/product.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./assets/artTemplate/template.js"></script>
+    <script type=text/template id=product_bb>
+         <div class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop">
+                <!--支持循环，需要重复图片节点-->
+                {{if pic.length>0}}
+                <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{pic[pic.length-1].picAddr}}" height="320" /></a></div>
+                {{each pic}}
+                <div class="mui-slider-item"><a href="#"><img src="{{$value.picAddr}}" height="320" /></a></div>
+                {{/each}}
+                <!--支持循环，需要重复图片节点-->
+                <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{pic[0].picAddr}}" height="320" /></a></div>
+                {{else}}
+                <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="./images/product.jpg" /></a></div>
+                <div class="mui-slider-item"><a href="#"><img src="./images/product.jpg" /></a></div>
+                <!--支持循环，需要重复图片节点-->
+                <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="./images/product.jpg" /></a></div>
+                {{/if}}
+            </div>
+            <div class="mui-slider-indicator">
+                {{each pic}}
+                <div class="mui-indicator"></div>
+                {{/each}}
+            </div>
+        </div>
+        <div class="product_banner">
+            <ul>
+                <li>
+                    <span class="mui-ellipsis-2 mui-text-left">{{proName}}</span>
+                </li>
+                <li>
+                    <span>价格：</span><span>￥{{price}}</span><span>￥{{oldPrice}}</span>
+                </li>
+                <li>
+                    尺码：
+                    {{each size}}
+                    <span>{{$value}}</span>
+                    {{/each}}
+                </li>
+                <li>
+                    数量：
+                    <span class="product_left">-</span><input readonly type="text" value="0"><span class="product_right">+</span>
+                    剩余：{{num}} 件
+                </li>
+            </ul>
+        </div>
+    </script>
+</body>
+</html>

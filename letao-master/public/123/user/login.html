@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
+    <title>乐淘登录</title>
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="../assets/mui/css/mui.css"/>
+    <link rel="stylesheet" href="../assets/fa/css/font-awesome.css"/>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/login.css"/>
+</head>
+<body>
+    <div class="it_container">
+        <header class="it_topbar">
+            <a href="javascript:history.back();" class="btn_left"><span class="mui-icon mui-icon-arrowleft"></span></a>        
+            <h3>登录</h3>
+        </header>
+        <div class="it_content">
+            <div class="it_warpper">
+                <div class="mui-scroll-warpper">
+                    <form class="mui-input-group" autocomplete="off">
+                        <div class="mui-input-row">
+                            <label>用户名</label>
+                        <input type="text" name="username"  placeholder="请输入用户名" autocomplete="off">
+                        </div>
+                        <div class="mui-input-row">
+                            <label>密码</label>
+                            <input type="password" name="password"  placeholder="请输入密码" autocomplete="off">
+                        </div>
+                        <div class="mui-button-row">
+                            <input type="button" class="mui-btn-primary" value="登录">
+                            <input type="reset" class="mui-btn-danger" value="重置">
+                        </div>
+                    </form>
+                    <div class="register">
+                        <a href="javascript:;">免费注册</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="it_bottombar">
+            <ul>
+                <li>
+                    <a href="../index.html">
+                        <span class="fa fa-home"></span>
+                        <p class="mui-tab-label">首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="../category.html">
+                        <span class="fa fa-bars"></span>
+                        <p class="mui-tab-label">分类</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="../cart.html">
+                        <span class="fa fa-shopping-cart"></span>
+                        <p class="mui-tab-label">购物车</p>
+                    </a>
+                </li>
+                <li class="bottom_active">
+                    <a href="javascript:;">
+                        <span class="fa fa-user"></span>
+                        <p class="mui-tab-label">会员中心</p>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+<script src="../assets/mui/js/mui.js"></script>
+<script src="../assets/zepto/zepto.min.js"></script>
+<!-- <script src="../js/common.js"></script> -->
+<script src="../js/user/login.js"></script>
+</body>
+</html>

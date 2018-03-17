@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车</title>
+    <link type="image/x-icon" rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="assets/mui/css/mui.css"/>
+    <link rel="stylesheet" href="assets/fa/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/cart.css"/>
+</head>
+<body>
+    
+    <div class="it_container">
+        <header class="it_topbar">
+            <a href="javascript:history.back();" class="btn_left"><span class="mui-icon mui-icon-arrowleft"></span></a>        
+            <h3>购物车</h3>
+            <a href="./cart.html" class="btn_right"><span class="fa fa-refresh"></span></a>                
+        </header>
+        <div class="it_content">
+            <div class="it_warpper">
+                <div class="mui-scrolls">
+                    <ul>
+                        <!-- <li>
+                            <a href="javascript:;">
+                               <img src="./images/product.jpg" alt="">
+                                <div>
+                                    <p>李宁闪击篮球鞋驭帅10镭射队尚4男韦德之道空袭中高帮队尚3.5球鞋</p>
+                                    <p><span>￥999</span><span>￥1999</span><span>x1双</span></p>
+                                    <p><span>鞋码：50</span></p>
+                                </div> 
+                                <input type="checkbox">                                
+                                <span class="mui-icon mui-icon-arrowright"></span>
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="order">
+            <span>订单总额：￥0</span>
+            <a href="javascript:;">生成订单</a>
+        </div>
+        <footer class="it_bottombar">
+            <ul>
+                <li>
+                    <a href="./index.html">
+                        <span class="fa fa-home"></span>
+                        <p class="mui-tab-label">首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./category.html">
+                        <span class="fa fa-bars"></span>
+                        <p class="mui-tab-label">分类</p>
+                    </a>
+                </li>
+                <li class="bottom_active">
+                    <a href="./cart.html">
+                        <span class="fa fa-shopping-cart"></span>
+                        <p class="mui-tab-label">购物车</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="./user/index.html">
+                        <span class="fa fa-user"></span>
+                        <p class="mui-tab-label">会员中心</p>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <script src="./assets/zepto/zepto.min.js"></script>
+    <script src="assets/mui/js/mui.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./assets/artTemplate/template.js"></script>
+    <script type="text/template" id="cart_template">
+        <!-- <ul> -->
+            {{each datas}}
+            <li class="mui-table-view-cell mui-transitioning">
+                <div class="mui-slider-right mui-disabled">
+                    <a href="" class="mui-btn mui-btn-blue">编辑</a>
+                    <a href="" class="mui-btn mui-btn-red" data-id="{{$value.id}}">删除</a>
+                </div>
+                <a href="javascript:;" class="mui-navigate-right mui-slider-handle">
+                    {{if $value.pic.length ==0}}
+                    <img src="./images/product.jpg" alt="">
+                    {{else}}
+                    <img src="{{$value.pic[0].picAddr}}" alt="">
+                    {{/if}}
+                    <div>
+                        <p class="mui-ellipsis-2 mui-text-left">{{$value.proName}}</p>
+                        <p><span>￥{{$value.price}}</span><span>￥{{$value.oldPrice}}</span><span>x{{$value.num}}双</span></p>
+                        <p><span>鞋码：{{$value.size}}</span></p>
+                    </div> 
+                    <input type="checkbox">                                
+                    <span class="mui-icon mui-icon-arrowright"></span>
+                </a>
+            </li>
+            {{/each}}
+        <!-- </ul> -->
+    </script>
+    <script type="text/template" id="updatecart">
+        
+        <div class="update_size">
+            尺码：
+            {{each sizess}}
+            <span>{{$value}}</span>
+            {{/each}}
+        </div>
+        <div class="update_num">
+            数量：<span>-</span><span class="num">{{num}}</span><span>+</span>
+        </div>
+    </script>
+</body>
+</html>
